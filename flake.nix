@@ -29,7 +29,7 @@
           '';
         };
 
-        defaultPackage = self.packages.${system}.geoip-db;
+        packages.default = self.packages.${system}.geoip-db;
       }
     );
 }
