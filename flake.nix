@@ -19,7 +19,6 @@
         };
         opensearchVer = pkgs.opensearch;
       in {
-        # Create a custom package that only includes specific files
         packages.geoip-db = pkgs.stdenv.mkDerivation {
           name = "geoip-db";
           buildInputs = [pkgs.coreutils];
@@ -30,7 +29,6 @@
           '';
         };
 
-        # Make the package easily accessible
         defaultPackage = self.packages.${system}.geoip-db;
       }
     );
